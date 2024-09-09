@@ -1,15 +1,14 @@
 public class Subtask extends Task {
 
-    final private Epic linkEpic;
+    private Integer epicID;
 
-    public Subtask(String title, String description, Status status, Epic linkEpic) {
+    public Subtask(String title, String description, Status status, Integer epicID) {
         super(title, description, status);
-        this.linkEpic = linkEpic;
+        this.epicID = epicID;
     }
 
-
-    public Epic getLinkEpic() {
-        return linkEpic;
+    public Integer getLinkEpic() {
+        return epicID;
     }
 
 
@@ -20,15 +19,7 @@ public class Subtask extends Task {
                 ", description='" + getDescription() + '\'' +
                 ", ID=" + getID() +
                 ", status=" + getStatus() +
-                ", linkEpic=" + (linkEpic != null ? linkEpic.getID() : "null") +
                 '}';
     }
-
-
-
-
-
-
-
 
 }

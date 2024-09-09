@@ -2,34 +2,22 @@ import java.util.ArrayList;
 
 public class Epic extends Task{
 
-    private ArrayList <Subtask> subtasks;
+    Manager manager;
 
+    private final ArrayList <Integer> subtaskIDs;
 
     public Epic(String title, String description, Status status) {
         super(title, description, status);
-        this.subtasks = new ArrayList<>();
+        this.subtaskIDs = new ArrayList<>();
         }
 
-    //добавить подзадачу
-    /*
-    public void addSubtask (Subtask subtask) {
-        subtasks.add(subtask);
-    }
-
-     */
-
-    public ArrayList<Subtask> getSubtasks() {
-        return subtasks;
+    public ArrayList<Integer> getSubtaskIDs() {
+        return subtaskIDs;
     }
 
 
-    public boolean isDone() {
-        for (Subtask subtask : subtasks) {
-            if (subtask.getStatus() != Status.DONE) {
-                return false;
-            }
-        }
-        return true;
+    public boolean isDone(Integer id) {
+        return manager.getSubtaskById(id).getStatus() == Status.DONE;
     }
 
     @Override
@@ -39,12 +27,8 @@ public class Epic extends Task{
                 ", description='" + getDescription() + '\'' +
                 ", ID=" + getID() +
                 ", status=" + getStatus() +
-                ", subtasksCount=" + subtasks.size() +
+                ", subtasksCount=" + subtaskIDs.size() +
                 '}';
     }
-
-
-
-
 
 }

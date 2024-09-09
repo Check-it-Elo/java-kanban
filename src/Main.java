@@ -20,14 +20,14 @@ public class Main {
 
         Epic epic1 = new Epic("Эпик 1", "Описание для эпика 1", Status.NEW);
         manager.addEpic(epic1);
-        Subtask subtask1 = new Subtask("Подзадача 1", "Описание для подзадачи 1", Status.NEW, epic1);
-        Subtask subtask2 = new Subtask("Подзадача 2", "Описание для подзадачи 2", Status.NEW, epic1);
+        Subtask subtask1 = new Subtask("Подзадача 1", "Описание для подзадачи 1", Status.NEW, 1);
+        Subtask subtask2 = new Subtask("Подзадача 2", "Описание для подзадачи 2", Status.NEW, 1);
         manager.addSubtask(subtask1);
         manager.addSubtask(subtask2);
 
         Epic epic2 = new Epic("Эпик 2", "Описание для эпика 2", Status.NEW);
         manager.addEpic(epic2);
-        Subtask subtask3 = new Subtask("Подзадача 3", "Описание для подзадачи 3", Status.NEW, epic2);
+        Subtask subtask3 = new Subtask("Подзадача 3", "Описание для подзадачи 3", Status.NEW, 2);
         manager.addSubtask(subtask3);
 
         //ПЕЧАТЬ
@@ -50,10 +50,6 @@ public class Main {
         task1.changeTaskToDone();
         subtask1.changeTaskToInProgress();
         subtask2.changeTaskToDone();
-
-        manager.updateTask(task1);
-        manager.updateSubtask(subtask1);
-        manager.updateSubtask(subtask2);
 
         manager.updateEpicStatus(epic1.getID());
         manager.updateEpicStatus(epic2.getID());

@@ -4,17 +4,15 @@ public class Task {
     String description;
     int ID;
     Status status;
-    private static int counter = 0;
+
 
 
     public Task(String title, String description, Status status) {
         this.title = title;
         this.description = description;
-        this.ID = counter++;;
+        this.ID = Manager.counter++;
         this.status = status;
     }
-
-
 
 
     public String getTitle() {
@@ -32,7 +30,6 @@ public class Task {
     public Status getStatus() {
         return status;
     }
-
 
 
     public void changeTaskToInProgress() {
@@ -68,11 +65,6 @@ public class Task {
     }
 
 
-
-
-    //Если нужно менять значения полей у задачи вручную.
-    // хз нужно или нет
-
     public void setTitle(String title) {
         this.title = title;
     }
@@ -84,6 +76,5 @@ public class Task {
     public void setStatus(Status status) {
         this.status = status;
     }
-
 
 }
