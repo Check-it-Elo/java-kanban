@@ -1,3 +1,9 @@
+package model;
+
+import service.TaskManager;
+
+import service.*;
+
 public class Task {
 
     String title;
@@ -10,7 +16,7 @@ public class Task {
     public Task(String title, String description, Status status) {
         this.title = title;
         this.description = description;
-        this.ID = Manager.counter++;
+        this.ID = InMemoryTaskManager.counter++;
         this.status = status;
     }
 
@@ -56,7 +62,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
+        return "model.Task{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", ID=" + ID +

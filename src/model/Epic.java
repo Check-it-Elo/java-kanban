@@ -1,8 +1,12 @@
+package model;
+
 import java.util.ArrayList;
 
-public class Epic extends Task{
+import service.TaskManager;
 
-    Manager manager;
+public class Epic extends Task {
+
+    TaskManager manager;
 
     private final ArrayList <Integer> subtaskIDs;
 
@@ -22,7 +26,7 @@ public class Epic extends Task{
 
     @Override
     public String toString() {
-        return "Epic{" +
+        return "model.Epic{" +
                 "title='" + getTitle() + '\'' +
                 ", description='" + getDescription() + '\'' +
                 ", ID=" + getID() +
