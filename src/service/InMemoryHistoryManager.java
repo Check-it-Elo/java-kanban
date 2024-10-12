@@ -10,6 +10,7 @@ public class InMemoryHistoryManager implements HistoryManager {
 
     //private List<Task> history;
 
+
     private Node head;
     private Node tail;
     private HashMap<Integer, Node> taskMap;
