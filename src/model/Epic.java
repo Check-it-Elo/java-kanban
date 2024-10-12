@@ -8,20 +8,20 @@ public class Epic extends Task {
 
     TaskManager manager;
 
-    private final ArrayList<Integer> subtaskids;
+    private final ArrayList <Integer> subtaskIDs;
 
     public Epic(String title, String description, Status status) {
         super(title, description, status);
-        this.subtaskids = new ArrayList<>();
-    }
+        this.subtaskIDs = new ArrayList<>();
+        }
 
-    public ArrayList<Integer> getSubtaskids() {
-        return subtaskids;
+    public ArrayList<Integer> getSubtaskIDs() {
+        return subtaskIDs;
     }
 
 
     public boolean isDone(Integer id) {
-        return manager.getSubtaskByid(id).getStatus() == Status.DONE;
+        return manager.getSubtaskById(id).getStatus() == Status.DONE;
     }
 
     @Override
@@ -29,9 +29,9 @@ public class Epic extends Task {
         return "model.Epic{" +
                 "title='" + getTitle() + '\'' +
                 ", description='" + getDescription() + '\'' +
-                ", id=" + getid() +
+                ", ID=" + getID() +
                 ", status=" + getStatus() +
-                ", subtasksCount=" + subtaskids.size() +
+                ", subtasksCount=" + subtaskIDs.size() +
                 '}';
     }
 
