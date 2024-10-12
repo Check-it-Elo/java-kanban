@@ -26,7 +26,6 @@ public class InMemoryTaskManager implements TaskManager {
         this.historyManager = Managers.getDefaultHistory();
     }
 
-
     //Добавление
     @Override
     public void addTask(Task task) {
@@ -271,6 +270,5 @@ public class InMemoryTaskManager implements TaskManager {
     public List<Task> getHistory() {
         return historyManager.getHistory();
     }
-
 
 }
