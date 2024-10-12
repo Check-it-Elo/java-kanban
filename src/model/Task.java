@@ -28,7 +28,7 @@ public class Task {
         return description;
     }
 
-    public int getID() {
+    public int getId() {
         return ID;
     }
 

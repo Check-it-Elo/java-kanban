@@ -29,7 +29,7 @@ public class Epic extends Task {
         return "model.Epic{" +
                 "title='" + getTitle() + '\'' +
                 ", description='" + getDescription() + '\'' +
-                ", ID=" + getID() +
+                ", ID=" + getId() +
                 ", status=" + getStatus() +
                 ", subtasksCount=" + subtaskIDs.size() +
                 '}';
