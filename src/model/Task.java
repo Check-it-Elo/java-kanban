@@ -6,14 +6,14 @@ public class Task {
 
     String title;
     String description;
-    int Id;
+    int id;
     Status status;
 
 
     public Task(String title, String description, Status status) {
         this.title = title;
         this.description = description;
-        this.Id = InMemoryTaskManager.counter++;
+        this.id = InMemoryTaskManager.counter++;
         this.status = status;
     }
 
@@ -26,8 +26,8 @@ public class Task {
         return description;
     }
 
-    public int getId() {
-        return Id;
+    public int getid() {
+        return id;
     }
 
     public Status getStatus() {
@@ -49,12 +49,12 @@ public class Task {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Task task = (Task) obj;
-        return Id == task.Id;
+        return id == task.id;
     }
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(Id);
+        return Integer.hashCode(id);
     }
 
     @Override
@@ -62,7 +62,7 @@ public class Task {
         return "model.Task{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", Id=" + Id +
+                ", id=" + id +
                 ", status=" + status +
                 '}';
     }

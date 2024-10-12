@@ -12,9 +12,9 @@ public interface TaskManager {
     // Методы для управления задачами
     public void addTask(Task task);
 
-    public void deleteTaskById(int id);
+    public void deleteTaskByid(int id);
 
-    public Task getTaskById(int id);
+    public Task getTaskByid(int id);
 
     public ArrayList<Task> getAllTasks();
 
@@ -25,9 +25,9 @@ public interface TaskManager {
     // Методы для управления подзадачами
     public void addSubtask(Subtask subtask);
 
-    public void deleteSubtaskById(int id);
+    public void deleteSubtaskByid(int id);
 
-    public Subtask getSubtaskById(int id);
+    public Subtask getSubtaskByid(int id);
 
     public ArrayList<Subtask> getAllSubtasks();
 
@@ -38,9 +38,9 @@ public interface TaskManager {
     // Методы для управления эпиками
     public void addEpic(Epic epic);
 
-    public void deleteEpicById(int id);
+    public void deleteEpicByid(int id);
 
-    public Epic getEpicById(int id);
+    public Epic getEpicByid(int id);
 
     public ArrayList<Epic> getAllEpics();
 
@@ -49,9 +49,9 @@ public interface TaskManager {
     public void updateEpic(Epic epic);
 
     // Методы для обновления статусов
-    public void updateEpicStatus(int epicId);
+    public void updateEpicStatus(int epicid);
 
-    public ArrayList<Integer> getSubtaskIdsByEpicId(int id);
+    public ArrayList<Integer> getSubtaskidsByEpicid(int id);
 
     Task getTask(int id);
 
