@@ -41,7 +41,7 @@ class InMemoryTaskManagerTest {
 
         Task foundTask = taskManager.getTaskById(task.getId());
         assertNotNull(foundTask, "Task should not be null");
-        assertEquals(task.getId(), foundTask.getId(), "Task ID should match");
+        assertEquals(task.getId(), foundTask.getId(), "Task Id should match");
         assertEquals(task.getTitle(), foundTask.getTitle(), "Task names should match");
         assertEquals(task.getDescription(), foundTask.getDescription(), "Task descriptions should match");
         assertEquals(task.getStatus(), foundTask.getStatus(), "Task statuses should match");
@@ -54,7 +54,7 @@ class InMemoryTaskManagerTest {
 
         Epic foundEpic = taskManager.getEpicById(epic.getId());
         assertNotNull(foundEpic, "Epic should not be null");
-        assertEquals(epic.getId(), foundEpic.getId(), "Epic ID should match");
+        assertEquals(epic.getId(), foundEpic.getId(), "Epic Id should match");
         assertEquals(epic.getTitle(), foundEpic.getTitle(), "Epic names should match");
         assertEquals(epic.getDescription(), foundEpic.getDescription(), "Epic descriptions should match");
     }
@@ -69,7 +69,7 @@ class InMemoryTaskManagerTest {
 
         Subtask foundSubtask = taskManager.getSubtaskById(subtask.getId());
         assertNotNull(foundSubtask, "Subtask should not be null");
-        assertEquals(subtask.getId(), foundSubtask.getId(), "Subtask ID should match");
+        assertEquals(subtask.getId(), foundSubtask.getId(), "Subtask Id should match");
         assertEquals(subtask.getTitle(), foundSubtask.getTitle(), "Subtask names should match");
         assertEquals(subtask.getDescription(), foundSubtask.getDescription(), "Subtask descriptions should match");
         assertEquals(subtask.getStatus(), foundSubtask.getStatus(), "Subtask statuses should match");

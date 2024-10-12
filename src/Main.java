@@ -43,7 +43,7 @@ public class Main {
         } else {
             for (Epic epic : epics) {
                 System.out.println(epic);
-                ArrayList<Integer> subtaskIds = manager.getSubtaskIDsByEpicId(epic.getId());
+                ArrayList<Integer> subtaskIds = manager.getSubtaskIdsByEpicId(epic.getId());
                 for (int subtaskId : subtaskIds) {
                     Subtask subtask = manager.getSubtask(subtaskId);
                     if (subtask != null) {

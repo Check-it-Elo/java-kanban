@@ -8,15 +8,15 @@ public class Epic extends Task {
 
     TaskManager manager;
 
-    private final ArrayList<Integer> subtaskIDs;
+    private final ArrayList<Integer> subtaskIds;
 
     public Epic(String title, String description, Status status) {
         super(title, description, status);
-        this.subtaskIDs = new ArrayList<>();
+        this.subtaskIds = new ArrayList<>();
     }
 
-    public ArrayList<Integer> getSubtaskIDs() {
-        return subtaskIDs;
+    public ArrayList<Integer> getSubtaskIds() {
+        return subtaskIds;
     }
 
 
@@ -29,9 +29,9 @@ public class Epic extends Task {
         return "model.Epic{" +
                 "title='" + getTitle() + '\'' +
                 ", description='" + getDescription() + '\'' +
-                ", ID=" + getId() +
+                ", Id=" + getId() +
                 ", status=" + getStatus() +
-                ", subtasksCount=" + subtaskIDs.size() +
+                ", subtasksCount=" + subtaskIds.size() +
                 '}';
     }
 

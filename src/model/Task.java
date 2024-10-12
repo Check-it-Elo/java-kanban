@@ -1,21 +1,19 @@
 package model;
 
-import service.TaskManager;
-
 import service.*;
 
 public class Task {
 
     String title;
     String description;
-    int ID;
+    int Id;
     Status status;
 
 
     public Task(String title, String description, Status status) {
         this.title = title;
         this.description = description;
-        this.ID = InMemoryTaskManager.counter++;
+        this.Id = InMemoryTaskManager.counter++;
         this.status = status;
     }
 
@@ -29,7 +27,7 @@ public class Task {
     }
 
     public int getId() {
-        return ID;
+        return Id;
     }
 
     public Status getStatus() {
@@ -51,12 +49,12 @@ public class Task {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Task task = (Task) obj;
-        return ID == task.ID;
+        return Id == task.Id;
     }
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(ID);
+        return Integer.hashCode(Id);
     }
 
     @Override
@@ -64,7 +62,7 @@ public class Task {
         return "model.Task{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", ID=" + ID +
+                ", Id=" + Id +
                 ", status=" + status +
                 '}';
     }
